@@ -24,6 +24,8 @@ class BibmendApplicationContext(ApplicationContext):
 
         # Load Window
         window = BibmendMainWindow(self.get_design())
+        version = self.build_settings['version']
+        window.setWindowTitle(f"Bibmend {version}")
         window.setFont(raleway)
         return window
 
